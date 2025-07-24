@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.18" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.18">
       <PrivateAssets>all</PrivateAssets>
@@ -21,7 +23,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EaseChashProject.DataAccessLayer\EaseChashProject.DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EaseChashProject.DtoLayer\EaseChashProject.DtoLayer.csproj" />
     <ProjectReference Include="..\EaseChashProject.EntityLayer\EaseChashProject.EntityLayer.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ValidationRules\AppRoleValidationRules\" />
+    <Folder Include="ValidationRules\CustomerAccountProcessValidationRules\" />
+    <Folder Include="ValidationRules\CustomerAccountValidationRules\" />
   </ItemGroup>
 
 </Project>
