@@ -62,9 +62,9 @@ namespace EaseChashProject.PresentationLayer.Controllers
                     client.Send(mimeMessage); // 
                     client.Disconnect(true);
 
+                    TempData["mail"] = appUserRegisterDto.Email;
 
-
-                    return RedirectToAction("Index", "ConfirMail");
+                    return RedirectToAction("Index", "ConfirmMail");
                 }
                 else
                 {
